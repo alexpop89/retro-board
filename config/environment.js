@@ -3,9 +3,14 @@
 module.exports = function(environment) {
   var ENV = {
     modulePrefix: 'retro-board',
+    podModulePrefix: 'retro-board/features',
     environment: environment,
     rootURL: '/',
     locationType: 'auto',
+    firebase: 'https://retro-board-a78a4.firebaseio.com',
+    torii: {
+      sessionServiceName: 'session'
+    },
     EmberENV: {
       FEATURES: {
         // Here you can enable experimental features on an ember canary build
