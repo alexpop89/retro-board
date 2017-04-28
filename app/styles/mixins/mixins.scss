@@ -1,0 +1,22 @@
+.center-x {
+  margin: auto;
+}
+
+.center-x-absolute {
+  margin: auto;
+  left: 0;
+  right: 0;
+  position: absolute;
+}
+
+.center-y {
+  position: relative;
+  top: 50%;
+  transform: translateY(-50%);
+}
+
+.center-y-absolute {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+}

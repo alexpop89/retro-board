@@ -1,5 +1,11 @@
-@import "ember-bootstrap/bootstrap";
+@import 'mixins/colors';
+@import 'mixins/mixins';
 
-body {
-  background: red;
+@import 'components/header-components';
+@import 'components/buttons';
+
+@import 'pages/index';
+
+html, body {
+  background-color: $white;
 }
