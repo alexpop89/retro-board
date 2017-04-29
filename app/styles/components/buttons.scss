@@ -1,4 +1,9 @@
-.mdl-button.mdl-button--raised {
+.mdl-button--primary.mdl-button--primary.mdl-button--raised {
   background-color: $secondary-color;
   color: $pure-white;
+}
+
+.mdl-button.mdl-button--colored.mdl-button--secondary,
+.mdl-button.mdl-button--secondary {
+  color: $grey;
 }

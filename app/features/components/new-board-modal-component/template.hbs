@@ -1,0 +1,22 @@
+{{yield}}
+<div class="mdl-grid">
+  <button {{action 'newBoardModal'}} class="center-x mdl-cell mdl-cell--2-col mdl-cell--3-col-tablet mdl-cell--6-col-phone mdl-button mdl-js-button mdl-button--raised mdl-button--primary mdl-js-ripple-effect">
+    New Board
+  </button>
+
+  <dialog class="mdl-dialog mdl-cell--4-col mdl-cell--6-col-tablet mdl-cell--6-col-phone">
+    <h4 class="mdl-dialog__title">Create new board</h4>
+    <div class="mdl-dialog__content">
+      <form>
+        <div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label">
+          <input class="mdl-textfield__input" type="text" id="board-name">
+          <label class="mdl-textfield__label" for="board-name">Board Name</label>
+        </div>
+      </form>
+    </div>
+    <div class="mdl-dialog__actions">
+      <button {{action 'createBoard'}} type="button" class="mdl-button mdl-js-button mdl-button--raised mdl-button--primary mdl-js-ripple-effect">Create</button>
+      <button {{action 'close'}} type="button" class="mdl-button mdl-button--secondary mdl-js-button mdl-js-ripple-effect close">Cancel</button>
+    </div>
+  </dialog>
+</div>
