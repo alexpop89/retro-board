@@ -3,6 +3,9 @@ const EmberApp = require('ember-cli/lib/broccoli/ember-app');
 
 module.exports = function(defaults) {
   var app = new EmberApp(defaults, {
+    'ember-font-awesome': {
+      'includeFontFiles':false
+    },
     'ember-bootstrap': {
       'bootstrapVersion': 3,
       'importBootstrapFont': true,
@@ -23,7 +26,10 @@ module.exports = function(defaults) {
   // please specify an object with the list of modules as keys
   // along with the exports of each module as its value.
   
-  app.import(app.bowerDirectory + '/material-design-lite/material.js');
-  app.import(app.bowerDirectory + '/material-design-lite/material.css');
+  // app.import(app.bowerDirectory + '/material-design-lite/material.js');
+  // app.import(app.bowerDirectory + '/material-design-lite/material.css');
+  app.import(app.bowerDirectory + '/dialog-polyfill/dialog-polyfill.css');
+  app.import(app.bowerDirectory + '/dialog-polyfill/dialog-polyfill.js');
+  
   return app.toTree();
 };

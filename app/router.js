@@ -7,9 +7,7 @@ const Router = Ember.Router.extend({
 });
 
 Router.map(function() {
-  this.route('board', function() {
-    this.route('new');
-  });
+  this.route('board', {path: '/:titleURL'});
 });
 
 export default Router;

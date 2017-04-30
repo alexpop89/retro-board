@@ -2,6 +2,7 @@
   "name": "retro-board",
   "dependencies": {
     "material-design-lite": "^1.3.0",
-    "font-awesome": "^4.7.0"
+    "font-awesome": "^4.7.0",
+    "dialog-polyfill": "^0.4.7"
   }
 }
