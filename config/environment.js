@@ -7,7 +7,14 @@ module.exports = function(environment) {
     environment: environment,
     rootURL: '/',
     locationType: 'auto',
-    firebase: 'https://retro-board-a78a4.firebaseio.com',
+    firebase: {
+      apiKey: "AIzaSyDNROFd6NLD1t4_vFeJZbTGKPQuVCu_EeQ",
+      authDomain: "retro-board-a78a4.firebaseapp.com",
+      databaseURL: "https://retro-board-a78a4.firebaseio.com",
+      projectId: "retro-board-a78a4",
+      storageBucket: "retro-board-a78a4.appspot.com",
+      messagingSenderId: "438719506292"
+    },
     torii: {
       sessionServiceName: 'session'
     },
