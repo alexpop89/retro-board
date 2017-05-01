@@ -1,6 +1,10 @@
 import Ember from 'ember';
 
 export default Ember.Component.extend({
+  close() {
+    debugger;
+  },
+  
   actions: {
     newBoardModal() {
       if (!this.$('.mdl-dialog')[0].showModal) {
@@ -12,6 +16,7 @@ export default Ember.Component.extend({
     
     createBoard() {
       this.sendAction('createBoard', this.$('#board-name').val().trim());
+      this.$('.mdl-dialog')[0].close();
     },
     
     close() {

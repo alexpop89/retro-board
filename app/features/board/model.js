@@ -5,6 +5,6 @@ export default DS.Model.extend({
   title: DS.attr('string'),
   titleURL: DS.attr('string'),
   user: DS.belongsTo('user'),
-  date: DS.attr('date'),
+  date: DS.attr('string'),
   cards: DS.hasMany('card')
 });
