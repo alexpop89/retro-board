@@ -2,34 +2,37 @@
 
 module.exports = function(environment) {
   var ENV = {
-    modulePrefix: 'retro-board',
-    podModulePrefix: 'retro-board/features',
-    environment: environment,
-    rootURL: '/',
-    locationType: 'auto',
-    firebase: {
-      apiKey: "AIzaSyDNROFd6NLD1t4_vFeJZbTGKPQuVCu_EeQ",
-      authDomain: "retro-board-a78a4.firebaseapp.com",
-      databaseURL: "https://retro-board-a78a4.firebaseio.com",
-      projectId: "retro-board-a78a4",
-      storageBucket: "retro-board-a78a4.appspot.com",
-      messagingSenderId: "438719506292"
+    'modulePrefix': 'retro-board',
+    'podModulePrefix': 'retro-board/features',
+    'environment': environment,
+    'rootURL': '/',
+    'locationType': 'auto',
+    'ember-cli-string-helpers': {
+      'only': ['lowercase'],
     },
-    torii: {
-      sessionServiceName: 'session'
+    'firebase': {
+      'apiKey': "AIzaSyDNROFd6NLD1t4_vFeJZbTGKPQuVCu_EeQ",
+      'authDomain': "retro-board-a78a4.firebaseapp.com",
+      'databaseURL': "https://retro-board-a78a4.firebaseio.com",
+      'projectId': "retro-board-a78a4",
+      'storageBucket': "retro-board-a78a4.appspot.com",
+      'messagingSenderId': "438719506292"
     },
-    EmberENV: {
-      FEATURES: {
+    'torii': {
+      'sessionServiceName': 'session'
+    },
+    'EmberENV': {
+      'FEATURES': {
         // Here you can enable experimental features on an ember canary build
         // e.g. 'with-controller': true
       },
-      EXTEND_PROTOTYPES: {
+      'EXTEND_PROTOTYPES': {
         // Prevent Ember Data from overriding Date.parse.
-        Date: false
+        'Date': false
       }
     },
 
-    APP: {
+    'APP': {
       // Here you can pass flags/options to your application instance
       // when it is created
     }

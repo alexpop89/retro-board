@@ -9,18 +9,7 @@
     text-align: center;
   }
 
-  .start-doing {
-    background-color: $green;
-    color: $pure-white
-  }
-
-  .keep-doing {
-    background-color: $blue;
-    color: $pure-white
-  }
-
-  .stop-doing {
-    background-color: $red;
-    color: $pure-white;
+  .column-title {
+    height: 32px;
   }
 }

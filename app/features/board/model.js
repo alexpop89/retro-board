@@ -7,5 +7,8 @@ export default DS.Model.extend({
   user: DS.belongsTo('user'),
   date: DS.attr('string'),
   cards: DS.hasMany('card'),
-  viewersNumber: DS.attr('number')
+  viewersNumber: DS.attr('number'),
+  columns: DS.attr('', {
+    defaultValue() { return ['Start Doing', 'Stop Doing', 'Continue Doing'] }
+  })
 });

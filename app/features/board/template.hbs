@@ -3,21 +3,15 @@
   <div class="mdl-layout__header-row">
     {{model.title}}
   </div>
+  {{nrOfColumns}}
   <div class="mdl-grid">
-    <div class="mdl-cell mdl-cell--4-col mdl-cell--4-col-tablet mdl-cell--12-col-phone">
-    <span class="start-doing mdl-chip">
-        <span class="mdl-chip__text">Start Doing</span>
-    </span>
-    </div>
-    <div class="mdl-cell mdl-cell--4-col mdl-cell--4-col-tablet mdl-cell--12-col-phone">
-    <span class="stop-doing mdl-chip">
-        <span class="mdl-chip__text">Stop Doing</span>
-    </span>
-    </div>
-    <div class="mdl-cell mdl-cell--4-col mdl-cell--4-col-tablet mdl-cell--12-col-phone">
-    <span class="keep-doing mdl-chip">
-        <span class="mdl-chip__text">Keep Doing</span>
-    </span>
-    </div>
+    {{#each model.columns as |column| }}
+      <div class="mdl-cell mdl-cell--4-col mdl-cell--4-col-tablet mdl-cell--12-col-phone">
+        <span class="mdl-chip mdl-chip--deletable">
+            <span class="{{lowercase column}} mdl-chip__text">{{column}}</span>
+            <button type="button" class="mdl-chip__action"><i class="material-icons">&#xE145;</i></button>
+        </span>
+      </div>
+    {{/each}}
   </div>
 </div>
