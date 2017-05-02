@@ -5,6 +5,12 @@ export default Ember.Component.extend({
     debugger;
   },
   
+  didRender() {
+    if (typeof window.componentHandler !== 'undefined'){
+      window.componentHandler.upgradeAllRegistered();
+    }
+  },
+  
   actions: {
     newBoardModal() {
       if (!this.$('.mdl-dialog')[0].showModal) {

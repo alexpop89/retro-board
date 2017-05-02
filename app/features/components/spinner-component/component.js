@@ -9,5 +9,11 @@ export default Ember.Component.extend({
     hide() {
       this.$('.mdl-spinner').removeClass('is-active');
     }
+  },
+  
+  didRender() {
+    if (typeof window.componentHandler !== 'undefined'){
+      window.componentHandler.upgradeAllRegistered();
+    }
   }
 });

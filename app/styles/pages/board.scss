@@ -1,0 +1,26 @@
+.board {
+  .mdl-layout__header-row {
+    background: $secondary-color;
+    color: $pure-white;
+    padding: 0 16px;
+  }
+
+  .mdl-cell {
+    text-align: center;
+  }
+
+  .start-doing {
+    background-color: $green;
+    color: $pure-white
+  }
+
+  .keep-doing {
+    background-color: $blue;
+    color: $pure-white
+  }
+
+  .stop-doing {
+    background-color: $red;
+    color: $pure-white;
+  }
+}

@@ -6,5 +6,6 @@ export default DS.Model.extend({
   titleURL: DS.attr('string'),
   user: DS.belongsTo('user'),
   date: DS.attr('string'),
-  cards: DS.hasMany('card')
+  cards: DS.hasMany('card'),
+  viewersNumber: DS.attr('number')
 });

@@ -2,7 +2,7 @@
 const EmberApp = require('ember-cli/lib/broccoli/ember-app');
 
 module.exports = function(defaults) {
-  var app = new EmberApp(defaults, {
+  let app = new EmberApp(defaults, {
     'ember-font-awesome': {
       'includeFontFiles':false
     },
@@ -26,10 +26,10 @@ module.exports = function(defaults) {
   // please specify an object with the list of modules as keys
   // along with the exports of each module as its value.
   
-  // app.import(app.bowerDirectory + '/material-design-lite/material.js');
-  // app.import(app.bowerDirectory + '/material-design-lite/material.css');
+  app.import(app.bowerDirectory + '/material-design-lite/material.min.js');
+  app.import(app.bowerDirectory + '/material-design-lite/material.min.css');
   app.import(app.bowerDirectory + '/dialog-polyfill/dialog-polyfill.css');
   app.import(app.bowerDirectory + '/dialog-polyfill/dialog-polyfill.js');
   
-  return app.toTree();
+  return app.toTree([]);
 };

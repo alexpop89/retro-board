@@ -8,7 +8,8 @@ export default Ember.Controller.extend({
       let board = this.store.createRecord('board', {
         title: boardName,
         titleURL: boardUrl,
-        date: new Date().toISOString()
+        date: new Date().toISOString(),
+        viewersNumber: 0
       });
       
       board.save().then(() => {
