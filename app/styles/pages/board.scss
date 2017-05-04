@@ -7,9 +7,33 @@
 
   .mdl-cell {
     text-align: center;
+
+    .mdl-card {
+      margin: 16px auto 0 auto;
+      max-width: 250px;
+          width: auto;
+
+    }
   }
 
   .column-title {
     height: 32px;
+  }
+
+  .mdl-chip {
+    background-color: $black;
+    color: $pure-white;
+  }
+
+  .start.doing i {
+    color: $bright-green;
+  }
+
+  .stop.doing i {
+    color: $bright-red;
+  }
+
+  .continue.doing i {
+    color: $bright-blue;
   }
 }

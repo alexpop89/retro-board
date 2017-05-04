@@ -1,10 +1,6 @@
 import Ember from 'ember';
 
 export default Ember.Component.extend({
-  close() {
-    debugger;
-  },
-  
   didRender() {
     if (typeof window.componentHandler !== 'undefined'){
       window.componentHandler.upgradeAllRegistered();

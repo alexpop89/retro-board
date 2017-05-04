@@ -7,10 +7,21 @@
   <div class="mdl-grid">
     {{#each model.columns as |column| }}
       <div class="mdl-cell mdl-cell--4-col mdl-cell--4-col-tablet mdl-cell--12-col-phone">
-        <span class="mdl-chip mdl-chip--deletable">
-            <span class="{{lowercase column}} mdl-chip__text">{{column}}</span>
-            <button type="button" class="mdl-chip__action"><i class="material-icons">&#xE145;</i></button>
+        <span class="{{lowercase column}} mdl-chip mdl-chip--deletable">
+            <span class="mdl-chip__text">{{column}}</span>
+            <button type="button" class="mdl-chip__action" {{action 'addCard' column this.model}}><i class="material-icons">&#xE145;</i></button>
         </span>
+        <br/>
+
+        {{#each model.cards as |card|}}
+          {{#if (equal card.columnName column)}}
+            <div class="mdl-card mdl-shadow--2dp">
+              <div class="mdl-card__title">
+                {{card.text}}
+              </div>
+            </div>
+          {{/if}}
+        {{/each}}
       </div>
     {{/each}}
   </div>
