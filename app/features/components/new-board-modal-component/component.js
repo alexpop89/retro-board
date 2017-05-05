@@ -1,18 +1,14 @@
 import Ember from 'ember';
+import fixMaterial from '../../../utils/fix-material';
 
 export default Ember.Component.extend({
   didRender() {
-    if (typeof window.componentHandler !== 'undefined'){
-      window.componentHandler.upgradeAllRegistered();
-    }
+    fixMaterial();
   },
   
   actions: {
     newBoardModal() {
-      if (!this.$('.mdl-dialog')[0].showModal) {
-        window.dialogPolyfill.registerDialog(this.$('.mdl-dialog')[0]);
-      }
-      
+     fixMaterial();
       this.$('.mdl-dialog')[0].showModal();
     },
     

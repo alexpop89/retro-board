@@ -1,4 +1,5 @@
 import Ember from 'ember';
+import fixMaterial from '../../utils/fix-material';
 
 export default Ember.Controller.extend({
   actions: {
@@ -10,6 +11,7 @@ export default Ember.Controller.extend({
       
       board.get('cards').pushObject(card);
       card.save();
+      Ember.run.next(null, fixMaterial);
     }
   }
 });

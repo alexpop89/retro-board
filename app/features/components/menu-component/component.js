@@ -1,9 +1,8 @@
 import Ember from 'ember';
+import fixMaterial from '../../../utils/get-or-create-user-util';
 
 export default Ember.Component.extend({
   didRender() {
-    if (typeof window.componentHandler !== 'undefined'){
-      window.componentHandler.upgradeAllRegistered();
-    }
+    fixMaterial();
   }
 });

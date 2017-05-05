@@ -1,0 +1,16 @@
+{{yield}}
+<div data-editing="{{card.editing}}" class="mdl-card mdl-shadow--2dp">
+  <i class="edit done material-icons" {{action 'toggleEditing'}}>
+    {{#if card.editing}}
+      &#xE5CA;
+    {{else}}
+      &#xE254;
+    {{/if}}
+  </i>
+  <div class="mdl-card__title">
+    <div class="mdl-textfield mdl-js-textfield">
+      {{textarea class="mdl-textfield__input" disabled=card.editing readonly=card.editing value=card.text}}
+      <label class="mdl-textfield__label" for="sample5">Card text...</label>
+    </div>
+  </div>
+</div>

@@ -13,6 +13,22 @@
       max-width: 250px;
           width: auto;
 
+      .edit {
+        color: $secondary-color;
+        cursor: pointer;
+        position: absolute;
+        right: 8px;
+        top: 8px;
+        z-index: 999;
+      }
+
+      .mdl-textfield.is-disabled .mdl-textfield__input,
+      .mdl-textfield__input {
+        border: none;
+        color: $primary-color;
+        height: 150px;
+        resize: none;
+      }
     }
   }
 

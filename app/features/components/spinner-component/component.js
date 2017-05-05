@@ -1,4 +1,5 @@
 import Ember from 'ember';
+import fixMaterial from '../../../utils/clean-url-util';
 
 export default Ember.Component.extend({
   actions: {
@@ -12,8 +13,6 @@ export default Ember.Component.extend({
   },
   
   didRender() {
-    if (typeof window.componentHandler !== 'undefined'){
-      window.componentHandler.upgradeAllRegistered();
-    }
+    fixMaterial();
   }
 });

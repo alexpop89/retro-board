@@ -1,9 +1,8 @@
 import Ember from 'ember';
+import fixMaterial from '../../../utils/fix-material';
 
 export default Ember.Component.extend({
   didRender() {
-    if (typeof window.componentHandler !== 'undefined'){
-      window.componentHandler.upgradeAllRegistered();
-    }
+    fixMaterial();
   }
 });

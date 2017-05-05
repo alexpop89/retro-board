@@ -11,17 +11,13 @@
             <span class="mdl-chip__text">{{column}}</span>
             <button type="button" class="mdl-chip__action" {{action 'addCard' column this.model}}><i class="material-icons">&#xE145;</i></button>
         </span>
-        <br/>
 
         {{#each model.cards as |card|}}
           {{#if (equal card.columnName column)}}
-            <div class="mdl-card mdl-shadow--2dp">
-              <div class="mdl-card__title">
-                {{card.text}}
-              </div>
-            </div>
+            {{card-component card=card}}
           {{/if}}
         {{/each}}
+
       </div>
     {{/each}}
   </div>
