@@ -3,9 +3,14 @@ import fixMaterial from '../../utils/fix-material';
 
 export default Ember.Controller.extend({
   actions: {
+    deleteCard(card) {
+      this.model.get('cards').removeObject(card);
+      this.model.save();
+    },
+    
     addCard(columnName, board) {
       let card = this.store.createRecord('card', {
-        text: 'Test card here',
+        text: '',
         columnName: columnName
       });
       

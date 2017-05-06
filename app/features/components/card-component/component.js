@@ -10,6 +10,17 @@ export default Ember.Component.extend({
     toggleEditing() {
       this.card.toggleProperty('editing');
       this.card.save();
+    },
+    
+    delete() {
+      this.sendAction('deleteCard', this.card);
+      this.card.set('_deleted', true);
+      this.card.deleteRecord();
+      this.card.save();
     }
-  }
+  },
+  
+  isLocked: Ember.computed('card.editing', function() {
+    return !this.card.get('editing');
+  }),
 });

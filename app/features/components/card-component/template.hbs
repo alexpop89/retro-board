@@ -1,16 +1,24 @@
 {{yield}}
 <div data-editing="{{card.editing}}" class="mdl-card mdl-shadow--2dp">
-  <i class="edit done material-icons" {{action 'toggleEditing'}}>
-    {{#if card.editing}}
-      &#xE5CA;
-    {{else}}
-      &#xE254;
-    {{/if}}
-  </i>
+  {{#unless card.editing}}
+    <i class="delete material-icons" {{action "delete"}}>&#xE872;</i>
+  {{/unless}}
   <div class="mdl-card__title">
     <div class="mdl-textfield mdl-js-textfield">
-      {{textarea class="mdl-textfield__input" disabled=card.editing readonly=card.editing value=card.text}}
+      {{textarea class="mdl-textfield__input" disabled=isLocked readonly=isLocked value=card.text}}
       <label class="mdl-textfield__label" for="sample5">Card text...</label>
     </div>
   </div>
+  <div class="mdl-card__actions">
+    {{#if card.editing}}
+      <a class="save mdl-button mdl-button--colored mdl-js-button mdl-js-ripple-effect" {{action "toggleEditing"}}>
+        <i class="material-icons">&#xE5CA;</i>Save
+      </a>
+    {{else}}
+      <a class="edit mdl-button mdl-button--colored mdl-js-button mdl-js-ripple-effect" {{action "toggleEditing"}}>
+        <i class="material-icons">&#xE254;</i>Edit
+      </a>
+    {{/if}}
+  </div>
+
 </div>

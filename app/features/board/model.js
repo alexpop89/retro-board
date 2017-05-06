@@ -10,5 +10,8 @@ export default DS.Model.extend({
   viewersNumber: DS.attr('number'),
   columns: DS.attr('', {
     defaultValue() { return ['Start Doing', 'Stop Doing', 'Continue Doing'] }
+  }),
+  _deleted: DS.attr('boolean', {
+    defaultValue() {return false}
   })
 });

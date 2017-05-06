@@ -14,7 +14,9 @@
 
         {{#each model.cards as |card|}}
           {{#if (equal card.columnName column)}}
-            {{card-component card=card}}
+            {{#unless card._delete}}
+              {{card-component card=card deleteCard='deleteCard'}}
+            {{/unless}}
           {{/if}}
         {{/each}}
 

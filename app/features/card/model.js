@@ -6,5 +6,8 @@ export default DS.Model.extend({
   columnName: DS.attr('string'),
   editing: DS.attr('boolean', {
     defaultValue() { return true }
+  }),
+  _deleted: DS.attr('boolean', {
+    defaultValue() {return false}
   })
 });

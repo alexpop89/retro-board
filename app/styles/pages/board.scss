@@ -13,13 +13,21 @@
       max-width: 250px;
           width: auto;
 
-      .edit {
-        color: $secondary-color;
+      .delete {
+        color: $primary-color;
         cursor: pointer;
+        opacity: 0;
         position: absolute;
         right: 8px;
         top: 8px;
         z-index: 999;
+        @include transition();
+      }
+
+      .save,
+      .edit {
+        opacity: 0;
+        @include transition();
       }
 
       .mdl-textfield.is-disabled .mdl-textfield__input,
@@ -28,6 +36,16 @@
         color: $primary-color;
         height: 150px;
         resize: none;
+      }
+
+      &:hover,
+      &[data-editing="true"] {
+        .save,
+        .edit,
+        .delete {
+          opacity: 1;
+          @include transition();
+        }
       }
     }
   }

@@ -8,7 +8,7 @@ export default Ember.Component.extend({
   
   actions: {
     newBoardModal() {
-     fixMaterial();
+      fixMaterial();
       this.$('.mdl-dialog')[0].showModal();
     },
     
