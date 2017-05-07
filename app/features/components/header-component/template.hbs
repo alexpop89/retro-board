@@ -2,7 +2,7 @@
 <div class="mdl-layout__header-row">
   <!-- Title -->
   <span class="mdl-layout-title">
-    {{#link-to "index"}}Title{{/link-to}}
+    {{#link-to "index"}}{{appTitle}}{{/link-to}}
   </span>
   <!-- Add spacer, to align navigation to the right -->
   <div class="mdl-layout-spacer"></div>
@@ -13,4 +13,8 @@
     <a class="mdl-navigation__link" href="">Link</a>
     <a class="mdl-navigation__link" href="">Link</a>
   </nav>
+</div>
+<div id="signed-in-snackbar" class="mdl-js-snackbar mdl-snackbar">
+  <div class="mdl-snackbar__text"></div>
+  <button class="mdl-snackbar__action" type="button"></button>
 </div>

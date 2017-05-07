@@ -7,6 +7,7 @@ export default Ember.Controller.extend({
       let boardUrl = cleanUrl(boardName);
       let board = this.store.createRecord('board', {
         title: boardName,
+        owner: this.session.get('currentUser').uid,
         titleURL: boardUrl,
         date: new Date().toISOString(),
         viewersNumber: 0

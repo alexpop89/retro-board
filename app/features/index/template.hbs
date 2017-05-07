@@ -1,4 +1,9 @@
 {{outlet}}
 {{welcome-component}}
+
+{{#each model as |board|}}
+  {{board.title}}
+{{/each}}
+
 {{new-board-modal-component createBoard='createBoard'}}
 {{spinner-component listenTo='controller'}}
