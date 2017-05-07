@@ -1,9 +1,13 @@
 {{outlet}}
-{{welcome-component}}
+<div class="index-page">
+  {{welcome-component}}
 
-{{#each model as |board|}}
-  {{board.title}}
-{{/each}}
+  <div class="mdl-grid user-boards">
+    {{#each model as |board|}}
+      {{board-component board=board}}
+    {{/each}}
+  </div>
 
-{{new-board-modal-component createBoard='createBoard'}}
-{{spinner-component listenTo='controller'}}
+  {{new-board-modal-component createBoard='createBoard'}}
+  {{spinner-component listenTo='controller'}}
+</div>

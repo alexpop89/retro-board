@@ -4,8 +4,8 @@ const {RSVP: {Promise}} = Ember;
 export default function signIn() {
   return {
     anonymous(session) {
-      new Promise((resolve, reject) => {
-        session.open('firebase', {provider: 'anonymous'}).then(resolve).catch(reject);
+      return new Promise((resolve) => {
+        session.open('firebase', {provider: 'anonymous'}).then(resolve).catch(resolve);
       });
     }
   }

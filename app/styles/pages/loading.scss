@@ -1,0 +1,20 @@
+.loading-page {
+  .mdl-progress {
+    position: absolute;
+    left: 0;
+    right: 0;
+    top: 0;
+    bottom: 0;
+    margin: auto;
+    width: 30%;
+
+    .progressbar {
+      background-color: $secondary-color;
+    }
+
+    .bufferbar,
+    .auxbar {
+      background-image: linear-gradient(to right ,rgba(255,255,255,.7),rgba(255,255,255,.7)),linear-gradient(to right, $primary-color , $primary-color);
+    }
+  }
+}

@@ -9,7 +9,9 @@ export default Ember.Component.extend({
   actions: {
     toggleEditing() {
       this.card.toggleProperty('editing');
-      this.card.save();
+      this.card.save().then(() => {
+        fixMaterial();
+      });
     },
     
     delete() {
